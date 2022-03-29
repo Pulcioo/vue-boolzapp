@@ -17,10 +17,29 @@
 
 <body>
     <div id="vue-app" class="container-fluid">
+        <!-- parte sinistra -->
         <div id="contacts" class="row d-flex flex-column">
-            <div class="col-4">sofia</div>
-            <div class="col-4">notifiche</div>
-            <!-- button cerca chat -->
+            <!-- mio account -->
+            <div class="col-4 d-flex justify-content-between align-items-center">
+                <div class="profile">
+                    <img src="img-bolzapp/avatar_io.jpg" alt="mio-avatar" class="mt-2 mb-2">
+                    <span>Sofia</span>
+                </div>
+                <div class="icons">
+                    <i class="fa-solid fa-ellipsis-vertical m-2"></i>
+                    <i class="fa-solid fa-message m-2"></i>
+                    <i class="fa-solid fa-circle-notch"></i>
+                </div>
+            </div>
+            <!-- notifiche -->
+            <div class="col-4 d-flex">
+                <i class="fa-solid fa-bell-slash fa-2x m-2"></i>
+                <div class="d-flex flex-column justify-content-center">
+                    <span class="size_12">Ricevi notifiche di nuovi messaggi</span>
+                    <span class="size_10"><u>Attiva notifiche desktop</u></span>
+                </div>
+            </div>
+            <!-- button cerca/scrivi chat -->
             <div class="col-4 p-1">
                 <div class="input-group input-group-sm">
                     <div class="input-group-prepend">
@@ -30,8 +49,8 @@
                 </div>
             </div>
             <!-- lista contatti -->
-            <div class="col-4">
-                <ul class="d-flex flex-column">
+            <div class="col-4 padding_0">
+                <ul class="d-flex flex-column padding_0">
                     <li v-for="(item,index) in contacts" class="d-flex justify-content-between">
                         <img :src="`img-bolzapp/avatar${item.avatar}.jpg`" :alt="`avatar${item.avatar}`" class="m-2">
                         <div class="info d-flex flex-column justify-content-top">
@@ -45,6 +64,7 @@
                 </ul>
             </div>
         </div>
+        <!-- parte destra -->
         <div id="chat" class="row">
 
         </div>
