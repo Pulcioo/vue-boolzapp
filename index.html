@@ -20,7 +20,16 @@
         <div id="contacts" class="row d-flex flex-column">
             <div class="col-4">sofia</div>
             <div class="col-4">notifiche</div>
-            <div class="col-4">cerca</div>
+            <!-- button cerca chat -->
+            <div class="col-4 p-1">
+                <div class="input-group input-group-sm">
+                    <div class="input-group-prepend">
+                        <button class="button"><i class="fa-solid fa-magnifying-glass icon_search"></i></button>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat">
+                </div>
+            </div>
+            <!-- lista contatti -->
             <div class="col-4">
                 <ul class="d-flex flex-column">
                     <li v-for="(item,index) in contacts" class="d-flex justify-content-between">
