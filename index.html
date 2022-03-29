@@ -23,7 +23,16 @@
             <div class="col-4">cerca</div>
             <div class="col-4">
                 <ul class="d-flex flex-column">
-                    <li v-for="(item,index) in contacts"> {{ item.name }}</li>
+                    <li v-for="(item,index) in contacts" class="d-flex justify-content-between">
+                        <img :src="`img-bolzapp/avatar${item.avatar}.jpg`" :alt="`avatar${item.avatar}`" class="m-2">
+                        <div class="info d-flex flex-column justify-content-top">
+                            <div class="d-flex justify-content-between">
+                                <span class="size_14">{{ item.name }}</span>
+                                <span class="color_gray size_10">12:00</span>
+                            </div>
+                            <span class="color_gray size_10">Ultimo messaggio inviato</span>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>

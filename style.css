@@ -11,8 +11,41 @@
     border: 1px solid red;
 }
 
+.color_gray{
+    color: rgb(190, 187, 187);
+}
+
+.size_10{
+    font-size: 10px;
+}
+
+.size_14{
+    font-size: 14px;
+}
+
+.flex_grow{
+    flex-grow: 1;
+}
+
 /* content */
+#vue-app{
+    max-width: 1200px;
+}
+
 ul{
     list-style-type: none;
-    padding: 0;
+    padding: 0; 
+}
+
+ul li{
+    border: 0.5px solid rgb(190, 187, 187);
+}
+
+ul li img{
+    width: 50px;
+    border-radius: 50%;
+}
+
+.info{
+    width: 80%;
 }
