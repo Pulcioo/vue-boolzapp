@@ -7,5 +7,12 @@
 }
 
 /* utilitities */
+[class*="col"] {
+    border: 1px solid red;
+}
 
 /* content */
+ul{
+    list-style-type: none;
+    padding: 0;
+}

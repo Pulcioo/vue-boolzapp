@@ -16,6 +16,21 @@
 </head>
 
 <body>
+    <div id="vue-app" class="container-fluid">
+        <div id="contacts" class="row d-flex flex-column">
+            <div class="col-4">sofia</div>
+            <div class="col-4">notifiche</div>
+            <div class="col-4">cerca</div>
+            <div class="col-4">
+                <ul class="d-flex flex-column">
+                    <li v-for="(item,index) in contacts"> {{ item.name }}</li>
+                </ul>
+            </div>
+        </div>
+        <div id="chat" class="row">
+
+        </div>
+    </div>
     <script type="text/javascript" src="script.js"></script>
 </body>
 
