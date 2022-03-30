@@ -33,7 +33,15 @@
     padding: 0;
 }
 
-.flex_grow{
+.h_100{
+    height: 100%;
+}
+
+.h_60{
+    height: 60px;
+}
+
+.grow{
     flex-grow: 1;
 }
 
@@ -44,6 +52,7 @@
     max-width: 1200px;
 }
 
+/* parte sinistra */
 /***** classi lista contatti *****/
 ul{
     list-style-type: none;
@@ -88,4 +97,30 @@ ul li img{
 .profile img{
     width: 50px;
     border-radius: 50%;
+}
+
+/* parte destra */
+/* messaggi */
+.background_img{
+    background-image:url("img-bolzapp/mine.jpg");
+}
+
+.message{
+    min-width: 200px;
+    border: 2px solid black;
+    padding: 5px 10px;
+}
+
+.sent{
+    background-color: #d5f9ba;
+}
+
+.received{
+    background-color: white;
+}
+
+/* tastiera */
+#chat input{
+    width: 70%;
+    margin: 15px 40px;
 }
