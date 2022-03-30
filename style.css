@@ -117,18 +117,26 @@ ul li img{
     background-image:url("img-bolzapp/mine.jpg");
 }
 
-.message{
-    min-width: 200px;
-    border: 2px solid black;
-    padding: 5px 10px;
+.message-sent{
+    display: flex;
+    justify-content: end;
+}
+
+.message-received{
+    display: flex;
+    justify-content: start;
 }
 
 .sent{
     background-color: #d5f9ba;
+    padding: 5px 10px;
+    border-radius: 10px;
 }
 
 .received{
     background-color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
 }
 
 /* tastiera */

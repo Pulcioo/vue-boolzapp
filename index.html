@@ -53,7 +53,8 @@
                     <!-- lista contatti -->
                     <div class="col-12 padding_0">
                         <ul class="d-flex flex-column padding_0">
-                            <li v-for="(item,index) in contacts" class="d-flex justify-content-between">
+                            <li @click="setActiveContact(index)" v-for="(item,index) in contacts"
+                                class="d-flex justify-content-between">
                                 <img :src="`img-bolzapp/avatar${item.avatar}.jpg`" :alt="`avatar${item.avatar}`"
                                     class="m-2">
                                 <div class="info d-flex flex-column justify-content-top">
@@ -74,9 +75,10 @@
                     <!-- contatto con cui chatto -->
                     <div class="col-12 d-flex justify-content-between align-items-center">
                         <div class="profile d-flex align-items-end">
-                            <img src="img-bolzapp/avatar_io.jpg" alt="mio-avatar" class="h_100 mt-2 mb-2">
+                            <img :src="`img-bolzapp/avatar_${activeContact+1}.jpg`" alt="mio-avatar"
+                                class="h_100 mt-2 mb-2">
                             <div class="px-3">
-                                <span>Sofia</span>
+                                <span>{{contacts[activeContact].name}}</span>
                                 <p class="size_10 color_gray">Ultimo accesso oggi alle 12:00</p>
                             </div>
                         </div>
@@ -87,8 +89,10 @@
                         </div>
                     </div>
                     <!-- messaggi -->
-                    <div class="col-12 d-flex flex-column grow padding_0 background_img">
-
+                    <div class="col-12 flex-grow-1 bg-message p-5 background_img">
+                        <div v-for="message in contacts[activeContact].messages" :class="'message-' + message.status">
+                            <p :class="message.status">{{message.message}}</p>
+                        </div>
                     </div>
                     <!-- tastiera -->
                     <div class="col-12 d-flex h_60 bg_gray">
@@ -101,8 +105,8 @@
                 </div>
             </div>
         </div>
-        <script type="text/javascript" src="script.js"></script>
     </div>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>
