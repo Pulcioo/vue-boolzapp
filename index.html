@@ -16,26 +16,26 @@
 </head>
 
 <body>
-    <div id="vue-app" class="container-fluid">
+    <div id="vue-app" class="container-fluid pt-3">
         <div class="row">
             <!-- parte sinistra -->
-            <div id="contacts" class="col-4 d-flex flex-column">
+            <div id="contacts" class="col-4 d-flex flex-column border">
                 <div class="row">
                     <!-- mio account -->
-                    <div class="col-12 d-flex justify-content-between align-items-center">
+                    <div class="col-12 d-flex justify-content-between align-items-center bg_gray">
                         <div class="profile">
                             <img src="img-bolzapp/avatar_io.jpg" alt="mio-avatar" class="mt-2 mb-2">
                             <span>Sofia</span>
                         </div>
                         <div class="icons">
-                            <i class="fa-solid fa-circle-notch"></i>
-                            <i class="fa-solid fa-message m-2"></i>
-                            <i class="fa-solid fa-ellipsis-vertical m-2"></i>
+                            <i class="fa-solid fa-circle-notch color_gray"></i>
+                            <i class="fa-solid fa-message m-2 color_gray"></i>
+                            <i class="fa-solid fa-ellipsis-vertical m-2 color_gray"></i>
                         </div>
                     </div>
                     <!-- notifiche -->
-                    <div class="col-12 d-flex">
-                        <i class="fa-solid fa-bell-slash fa-2x m-2"></i>
+                    <div class="col-12 d-flex bg_blue">
+                        <i class="fa-solid fa-bell-slash fa-2x m-2 color_white"></i>
                         <div class="d-flex flex-column justify-content-center">
                             <span class="size_12">Ricevi notifiche di nuovi messaggi</span>
                             <span class="size_10"><u>Attiva notifiche desktop</u></span>
@@ -70,17 +70,20 @@
             </div>
             <!-- parte destra -->
             <div id="chat" class="col-8 d-flex flex-column">
-                <div class="row flex-column h_100">
+                <div class="row flex-column h_100 bg_gray">
                     <!-- contatto con cui chatto -->
                     <div class="col-12 d-flex justify-content-between align-items-center">
-                        <div class="profile">
+                        <div class="profile d-flex align-items-end">
                             <img src="img-bolzapp/avatar_io.jpg" alt="mio-avatar" class="h_100 mt-2 mb-2">
-                            <span>Sofia</span>
+                            <div class="px-3">
+                                <span>Sofia</span>
+                                <p class="size_10 color_gray">Ultimo accesso oggi alle 12:00</p>
+                            </div>
                         </div>
                         <div class="icons">
-                            <i class="fa-solid fa-magnifying-glass m-2"></i>
-                            <i class="fa-solid fa-paperclip"></i>
-                            <i class="fa-solid fa-ellipsis-vertical m-2"></i>
+                            <i class="fa-solid fa-magnifying-glass m-2 color_gray"></i>
+                            <i class="fa-solid fa-paperclip color_gray"></i>
+                            <i class="fa-solid fa-ellipsis-vertical m-2 color_gray"></i>
                         </div>
                     </div>
                     <!-- messaggi -->
@@ -88,10 +91,10 @@
 
                     </div>
                     <!-- tastiera -->
-                    <div class="col-12 d-flex h_60">
+                    <div class="col-12 d-flex h_60 bg_gray">
                         <div class="text-center w-100">
                             <i class="fa-regular fa-face-smile align-middle"></i>
-                            <input type="text" placeholder="Scrivi un messaggio" class="align-middle">
+                            <input type="text" placeholder=" Scrivi un messaggio" class="align-middle">
                             <i class="fa-solid fa-microphone align-middle"></i>
                         </div>
                     </div>

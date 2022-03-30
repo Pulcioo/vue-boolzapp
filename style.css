@@ -9,12 +9,20 @@
 
 
 /* utilitities */
-[class*="col"] {
-    border: 1px solid red;
+.bg_gray{
+    background-color: #e0dfdf;
+}
+
+.bg_blue{
+    background-color: #8edafb;
 }
 
 .color_gray{
-    color: rgb(190, 187, 187);
+    color: #b1b1b1;
+}
+
+.color_white{
+    color: white;
 }
 
 .size_10{
@@ -43,6 +51,10 @@
 
 .grow{
     flex-grow: 1;
+}
+
+.border{
+    border-color: black;
 }
 
 
