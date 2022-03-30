@@ -98,7 +98,8 @@
                     <div class="col-12 d-flex h_60 bg_gray">
                         <div class="text-center w-100">
                             <i class="fa-regular fa-face-smile align-middle"></i>
-                            <input type="text" placeholder=" Scrivi un messaggio" class="align-middle">
+                            <input @keyup.enter="addMessage(activeContact)" v-model="newMessage" type="text"
+                                placeholder=" Scrivi un messaggio" class="align-middle">
                             <i class="fa-solid fa-microphone align-middle"></i>
                         </div>
                     </div>

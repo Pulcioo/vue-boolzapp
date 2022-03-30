@@ -201,11 +201,25 @@ const app = new Vue(
         data: {
             contacts,
             activeContact: 0,
+            newMessage: '',
         },
         methods: {
             setActiveContact(i) {
                 this.activeContact = i;
-                console.log(this.activeContact)
+                // console.log(this.activeContact)
+            },
+            addMessage(activeContact) {
+                const message = {
+                    date: '',
+                    message: this.newMessage.trim(),
+                    status: 'sent'
+                }
+
+                if (this.newMessage.length > 0) {
+                    this.contacts[activeContact].messages.push(message)
+                }
+                this.newMessage = '';
+                // console.log(this.contacts[activeContact].messages)
             }
         }
     }
