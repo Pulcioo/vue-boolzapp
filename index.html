@@ -17,7 +17,7 @@
 
 <body>
     <div id="vue-app" class="container-fluid pt-3">
-        <div class="row">
+        <div class="row m_height">
             <!-- parte sinistra -->
             <div id="contacts" class="col-4 d-flex flex-column border">
                 <div class="row">
@@ -47,14 +47,15 @@
                             <div class="input-group-prepend">
                                 <button class="button"><i class="fa-solid fa-magnifying-glass icon_search"></i></button>
                             </div>
-                            <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat">
+                            <input type="text" @keyup="filteredContacts" v-model="searchContact" class="form-control"
+                                placeholder="Cerca o inizia una nuova chat">
                         </div>
                     </div>
                     <!-- lista contatti -->
                     <div class="col-12 padding_0">
                         <ul class="d-flex flex-column padding_0">
                             <li @click="setActiveContact(index)" v-for="(item,index) in contacts"
-                                class="d-flex justify-content-between">
+                                v-if="item.visible == true" class=" d-flex justify-content-between">
                                 <img :src="`img-bolzapp/avatar${item.avatar}.jpg`" :alt="`avatar${item.avatar}`"
                                     class="m-2">
                                 <div class="info d-flex flex-column justify-content-top">
@@ -62,7 +63,7 @@
                                         <span class="size_14">{{ item.name }}</span>
                                         <span class="color_gray size_10">12:00</span>
                                     </div>
-                                    <span class="color_gray size_10">Ultimo messaggio inviato</span>
+                                    <span class="color_gray size_10">{{ lastMessage(item) }}</span>
                                 </div>
                             </li>
                         </ul>

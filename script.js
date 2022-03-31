@@ -202,6 +202,7 @@ const app = new Vue(
             contacts,
             activeContact: 0,
             newMessage: '',
+            searchContact: ''
         },
         methods: {
             setActiveContact(i) {
@@ -229,7 +230,20 @@ const app = new Vue(
                     status: 'received'
                 }
                 this.contacts[activeContact].messages.push(reply)
+            },
+            filteredContacts() {
+                this.contacts.forEach(item => {
+                    const names = item.name.toLowerCase();
+                    // console.log(names)
+                    item.visible = names.includes(this.searchContact);
+                });
+            },
+            lastMessage(item) {
+                const messages = item.messages;
+                const last = (messages.length > 0) ? messages[messages.length - 1].message : '';
+                // console.log(last)
+                return last
             }
         }
     }
-);
+)

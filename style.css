@@ -57,6 +57,10 @@
     border-color: black;
 }
 
+.m_height{
+    min-height: 720px;
+}
+
 
 
 /* content */
