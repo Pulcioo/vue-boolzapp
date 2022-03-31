@@ -217,9 +217,18 @@ const app = new Vue(
 
                 if (this.newMessage.length > 0) {
                     this.contacts[activeContact].messages.push(message)
+                    this.addReply(activeContact)
                 }
                 this.newMessage = '';
                 // console.log(this.contacts[activeContact].messages)
+            },
+            addReply(activeContact) {
+                const reply = {
+                    date: '',
+                    message: 'Ok!',
+                    status: 'received'
+                }
+                setInterval(this.contacts[activeContact].messages.push(reply), 1000)
             }
         }
     }
